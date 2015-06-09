@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>CS 553</title>
+<link rel="stylesheet" type="text/css" href="/static/stylesheets/view.css" media="all">
+<script type="text/javascript" src="/static/javascripts/view.js"></script>
+
+</head>
+<body id="main_body" >
+	
+	<img id="top" src="/static/images/top.jpg" alt="">
+	<div id="form_container">
+			
+		
+		<form id="container1" class="appnitro"  method="post" enctype="multipart/form-data" action= "/{{ option }}">
+		<div class="form_description">
+			<h2>Illinois Institute Of Technology</h2>
+			<p><b>This is a Cloud Computing programming assignment using Google App Engine.</b></p>
+		</div>						
+		<ul >
+		<li id="select_1" >
+			{% if option == 'insert' %}	
+				<b><h3>Insert a file</h3></b>
+				<label for "file"> Please select your requested filename:  </label>
+				<input type="file" name="insert" value="Browse">
+			{% endif %}
+			{% if option == 'check' %}
+				<b><h3>Check if a file exists</h3></b>
+				<label for "file"> Please enter your requested filename:  </label>
+				<input type ="text" name="check">
+			{% endif %}	
+			{% if option == 'find' %}	
+				<b><h3>Find a file and display it</h3></b>
+				<label for "file"> Please enter your requested filename:  </label>
+				<input type ="text" name="find">				
+			{% endif %}
+			{% if option == 'remove' %}	
+				<b><h3>Remove a file</h3></b>
+				<label for "file"> Please enter your requested filename:  </label>
+				<input type ="text" name="remove">				
+			{% endif %}
+			{% if option == 'removeall' %}	
+				<script type="text/javascript">
+            		window.location.href = "/{{ option }}"
+        		</script>
+			{% endif %}
+			{% if option == 'listing' %}	
+				<script type="text/javascript">
+            		window.location.href = "/{{ option }}"
+        		</script>
+			{% endif %}
+			{% if option == 'checkcache' %}	
+				<b><h3>Check for a file in the cache</h3></b>
+				<label for "file"> Please enter your requested filename:  </label>
+				<input type ="text" name="checkcache">				
+			{% endif %}
+			{% if option == 'removeallcache' %}	
+				<script type="text/javascript">
+            		window.location.href = "/{{ option }}"
+        		</script>
+			{% endif %}
+			{% if option == 'cachesize' %}	
+				<script type="text/javascript">
+            		window.location.href = "/{{ option }}"
+        		</script>
+			{% endif %}
+			{% if option == 'cachesizeelem' %}	
+				<script type="text/javascript">
+            		window.location.href = "/{{ option }}"
+        		</script>
+			{% endif %}
+			{% if option == 'benchmark' %}	
+				<script type="text/javascript">
+            		window.location.href = "/{{ option }}"
+        		</script>
+			{% endif %}
+		</li>
+		{% if option == 'insert' or option == 'check' or option == 'find' or option == 'remove' or option == 'checkcache' %}	
+			<li class="buttons">			    
+				<input id="saveForm" class="button_text" type="submit" name="submit" value="Submit" />
+			</li>
+		{% endif %}	
+		</ul>
+		</form>	
+
+	</div>
+	</body>
+</html>

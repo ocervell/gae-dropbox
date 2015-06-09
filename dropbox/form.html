@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>CS 553</title>
+<link rel="stylesheet" type="text/css" href="/static/stylesheets/view.css" media="all">
+<script type="text/javascript" src="/static/javascripts/view.js"></script>
+
+</head>
+<body id="main_body" >
+	
+	<img id="top" src="/static/images/top.jpg" alt="">
+	<div id="form_container">
+		<form id="container1" class="appnitro"  method="post" action="/land">
+		<div class="form_description">
+			<h2>Illinois Institute Of Technology</h2>
+			<p><b>This is a Cloud Computing programming assignment using Google App Engine.</b></p>
+		</div>						
+		<ul >
+		<div id = "horizontal">
+		<li id="select_1" >
+		<p> <b>Select the operation you want to perform from the dropdown menu.</b></p>
+	
+		<select name = "opt">
+  			<option value="insert">Insert file</option>
+  			<option value="check">Check file</option>
+  			<option value="find">Find file</option>
+  			<option value="remove">Remove file</option>
+  			<option value="listing">List all files</option>
+  			<option value="checkcache">Check file in cache</option>
+  			<option value="removeallcache">Remove all files from cache</option>
+  			<option value="removeall">Remove all files</option>
+  			<option value="cachesize">Show Cache Usage(MB)</option>
+  			<option value="cachesizeelem">Show total files in cache</option>
+			<option value="benchmark">Run benchmark</option>			
+		</select>
+
+		</li>
+		<li class="buttons">			    
+			<input id="saveForm" class="button_text" type="submit" name="submit" value="Submit" />
+		</li>
+		</div>
+		<div id = "horizontal">
+		<img id = "python" src="/static/images/python.png" alt="Python Powered" width=200px height=100px >
+
+		</div>
+
+			</ul>
+		</form>	
+
+	</div>
+	</body>
+</html>

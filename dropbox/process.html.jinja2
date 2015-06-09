@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>CS 553</title>
+<link rel="stylesheet" type="text/css" href="/static/stylesheets/view.css" media="all">
+<script type="text/javascript" src="/static/javascripts/view.js"></script>
+
+</head>
+<body id="main_body" >
+
+		{% if option == 'insert' %}
+			{% if success == 'yes' %}
+				<script> alert('File uploaded successfully'); </script>
+        		<script type="text/javascript">
+            		window.location.href = "/"
+        		</script>
+			{% else %}
+				<script> alert('File upload failed'); </script>
+        		<script type="text/javascript">
+            		window.location.href = "/"
+        		</script>				
+			{% endif %}	
+		{% elif option == 'check' %}
+			{% if success == 'yes' %}
+				<script> alert('File exists'); </script>
+        		<script type="text/javascript">
+            		window.location.href = "/"
+        		</script>
+			{% else %}
+				<script> alert('File doesn\'t exist'); </script>
+        		<script type="text/javascript">
+            		window.location.href = "/"
+        		</script>				
+			{% endif %}	
+		{% elif option == 'find' %}	
+			{% if success == 'yes' %}
+				<script> alert('File retrieved successfully'); </script>
+        		<script type="text/javascript">
+            		window.location.href = "/"
+        		</script>
+			{% else %}
+				<script> alert('File retrieving failed'); </script>
+        		<script type="text/javascript">
+            		window.location.href = "/"
+        		</script>				
+			{% endif %}	
+		{% elif option == 'remove' %}	
+			{% if success == 'yes' %}
+				<script> alert('File removed sucesssfully'); </script>
+        		<script type="text/javascript">
+            		window.location.href = "/"
+        		</script>
+			{% else %}
+				<script> alert('File removing failed'); </script>
+        		<script type="text/javascript">
+            		window.location.href = "/"
+        		</script>				
+			{% endif %}
+		{% elif option == 'removeall' %}	
+			{% if success == 'yes' %}
+				<script> alert('All files removed sucesssfully'); </script>
+        		<script type="text/javascript">
+            		window.location.href = "/"
+        		</script>
+			{% else %}
+				<script> alert('All files removing failed'); </script>
+        		<script type="text/javascript">
+            		window.location.href = "/"
+        		</script>				
+			{% endif %}
+		{% elif option == 'checkcache' %}	
+			{% if success == 'yes' %}
+				<script> alert('File exists in cache'); </script>
+        		<script type="text/javascript">
+            		window.location.href = "/"
+        		</script>
+			{% else %}
+				<script> alert('File does not exist in cache'); </script>
+        		<script type="text/javascript">
+            		window.location.href = "/"
+        		</script>				
+			{% endif %}
+		{% elif option == 'removeallcache' %}	
+			{% if success == 'yes' %}
+				<script> alert('Successfully removed all files in cache'); </script>
+        		<script type="text/javascript">
+            		window.location.href = "/"
+        		</script>
+			{% else %}
+				<script> alert('Error in removing all files in cache'); </script>
+        		<script type="text/javascript">
+            		window.location.href = "/"
+        		</script>				
+			{% endif %}
+		{% elif option == 'cachesize' %}	
+			{% if success == 'yes' %}
+				<script> alert('There are {{ size }} MB allocated to files in the cache'); </script>
+        		<script type="text/javascript">
+            		window.location.href = "/"
+        		</script>
+			{% else %}
+				<script> alert('Failed to access cache.'); </script>
+        		<script type="text/javascript">
+            		window.location.href = "/"
+        		</script>				
+			{% endif %}
+		{% elif option == 'cachesizeelem' %}	
+			{% if success == 'yes' %}
+				<script> alert('There are {{ elements }} files in the cache'); </script>
+        		<script type="text/javascript">
+            		window.location.href = "/"
+        		</script>
+			{% else %}
+				<script> alert('Failed to access cache.'); </script>
+        		<script type="text/javascript">
+            		window.location.href = "/"
+        		</script>				
+			{% endif %}
+		{% endif %}
+
+	</div>
+	</body>
+</html>
