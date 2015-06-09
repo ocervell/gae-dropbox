@@ -2,6 +2,7 @@
 A dropbox web application for Google App Engine
 
 Getting Started
+
 To deploy the app on your own Google App Engine project, you need to :
 
 - put the project folder dropbox in the Google App Engine SDK folder.
@@ -18,6 +19,7 @@ Note: This last line will launch a backend to be able to process the entire data
 - to generate the dataset: report to section ‘Dataset generator’
 
 Usage
+
 The web application can be accessed at 
 cloudcomputing553.appspot.com
 
