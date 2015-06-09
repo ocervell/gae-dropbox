@@ -2,7 +2,7 @@
 A dropbox web application for Google App Engine
 
 Getting Started
-===============
+---------------
 To deploy the app on your own Google App Engine project, you need to :
 
 - put the project folder dropbox in the Google App Engine SDK folder.
@@ -19,7 +19,7 @@ Note: This last line will launch a backend to be able to process the entire data
 - to generate the dataset: report to section ‘Dataset generator’
 
 Usage
-
+---------------
 The web application can be accessed at 
 cloudcomputing553.appspot.com
 
@@ -28,11 +28,9 @@ To do that, we added a backend that can support long requests.
 It is accessible at:
 backend.cloudcomputing553.appspot.com
 
-Homepage 
-
+Operations
+---------------
 At the homepage, you can select one of the following operations from the drop down button and then click Submit.
-
-Operations :
 
 •	Insert File - upload a file to GCS. If the file size is less than 100KB it is also stored in cache. 
 •	Check File - check if a file is on GCS
